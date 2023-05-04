@@ -16,5 +16,6 @@ RUN gradle clean build
 
 FROM eclipse-temurin as app
 WORKDIR /root
+RUN apt -y update && apt install -y openssh-client
 COPY --from=backend /project/build/libs/*-boot.jar ./app
 ENTRYPOINT ["java", "-jar", "--enable-preview", "/root/app"]
