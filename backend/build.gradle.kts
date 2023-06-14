@@ -7,10 +7,10 @@ repositories {
   maven("https://repo.spring.io/snapshot")
 }
 plugins {
-  id("org.springframework.boot") version "3.1.0-SNAPSHOT"
+  id("org.springframework.boot") version "3.1.1-SNAPSHOT"
   id("io.spring.dependency-management") version "1.1.0"
-  kotlin("jvm") version "1.8.20"
-  kotlin("plugin.spring") version "1.8.20"
+  kotlin("jvm") version "1.8.22"
+  kotlin("plugin.spring") version "1.8.22"
 }
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
@@ -22,7 +22,7 @@ dependencies {
 }
 tasks.withType<KotlinCompile> {
   kotlinOptions.jvmTarget = "19"
-  kotlinOptions.freeCompilerArgs += listOf("-opt-in=kotlin.time.ExperimentalTime", "-Xjsr305=strict")
+  kotlinOptions.freeCompilerArgs += listOf("-Xjsr305=strict")
 }
 tasks.withType<JavaCompile> {
   sourceCompatibility = "19"
