@@ -22,7 +22,7 @@ dependencies {
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 tasks.withType<KotlinCompile> {
-  kotlinOptions.jvmTarget = "19"
+  kotlinOptions.jvmTarget = "20"
   kotlinOptions.freeCompilerArgs += listOf(
     "-Xjsr305=strict",
     "-Xvalue-classes",
@@ -31,8 +31,8 @@ tasks.withType<KotlinCompile> {
   )
 }
 tasks.withType<JavaCompile> {
-  sourceCompatibility = "19"
-  targetCompatibility = "19"
+  sourceCompatibility = "20"
+  targetCompatibility = "20"
 }
 tasks.test {
   useJUnitPlatform()
