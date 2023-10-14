@@ -6,7 +6,7 @@ COPY frontend/package-lock.json ./package-lock.json
 COPY frontend/webpack.config.js ./webpack.config.js
 RUN npm ci && npm run build
 
-FROM gradle:jdk20 as backend
+FROM gradle:jdk21 as backend
 WORKDIR /project
 COPY backend/src ./src
 COPY backend/build.gradle.kts ./build.gradle.kts
