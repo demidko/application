@@ -5,4 +5,4 @@ build-backend: build-frontend
 	cd backend && gradle clean build
 
 build-frontend:
-	cd frontend && npm run build && rsync -ah --delete ./dist/ ../backend/src/main/resources/public/
+	cd frontend && npm run build && rsync -a --delete ./dist/ ../backend/src/main/resources/public/
