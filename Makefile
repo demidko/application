@@ -1,4 +1,4 @@
-run-havala: build-backend
+run-application: build-backend
 	java -jar backend/build/libs/backend-boot.jar
 
 build-backend: build-frontend
