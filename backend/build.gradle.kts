@@ -7,17 +7,17 @@ repositories {
   maven("https://repo.spring.io/snapshot")
 }
 plugins {
-  id("org.springframework.boot") version "3.2.0-SNAPSHOT"
-  id("io.spring.dependency-management") version "1.1.3"
-  kotlin("jvm") version "1.9.20-RC"
-  kotlin("plugin.spring") version "1.9.20-RC"
+  id("org.springframework.boot") version "3.3.0-SNAPSHOT"
+  id("io.spring.dependency-management") version "1.1.4"
+  kotlin("jvm") version "2.0.0-Beta2"
+  kotlin("plugin.spring") version "2.0.0-Beta2"
 }
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("org.springframework.boot:spring-boot-starter-validation")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
-  testImplementation("com.google.truth:truth:1.1.3")
+  testImplementation("com.google.truth:truth:1.2.0")
   testImplementation("io.mockk:mockk:1.13.4")
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
