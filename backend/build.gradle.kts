@@ -9,8 +9,8 @@ repositories {
 plugins {
   id("org.springframework.boot") version "3.3.0-SNAPSHOT"
   id("io.spring.dependency-management") version "1.1.4"
-  kotlin("jvm") version "2.0.0-Beta3"
-  kotlin("plugin.spring") version "2.0.0-Beta3"
+  kotlin("jvm") version "2.0.0-Beta4"
+  kotlin("plugin.spring") version "2.0.0-Beta4"
 }
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
