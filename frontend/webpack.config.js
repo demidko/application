@@ -14,6 +14,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         "./src/index.html",
+        "./src/app.webmanifest",
         {
           from: "./src/favicon",
           to: "./favicon/.",
