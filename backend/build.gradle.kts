@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 repositories {
@@ -9,8 +10,8 @@ repositories {
 plugins {
   id("org.springframework.boot") version "3.3.0-SNAPSHOT"
   id("io.spring.dependency-management") version "1.1.4"
-  kotlin("jvm") version "2.0.0-Beta4"
-  kotlin("plugin.spring") version "2.0.0-Beta4"
+  kotlin("jvm") version "2.0.0-Beta5"
+  kotlin("plugin.spring") version "2.0.0-Beta5"
 }
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-web")
@@ -22,13 +23,15 @@ dependencies {
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 tasks.withType<KotlinCompile> {
-  kotlinOptions.jvmTarget = "21"
-  kotlinOptions.freeCompilerArgs += listOf(
-    "-Xjsr305=strict",
-    "-Xvalue-classes",
-    "-opt-in=kotlin.ExperimentalStdlibApi",
-    "-opt-in=kotlin.time.ExperimentalTime"
-  )
+  compilerOptions {
+    jvmTarget = JVM_21
+    freeCompilerArgs.addAll(
+      "-Xjsr305=strict",
+      "-Xvalue-classes",
+      "-opt-in=kotlin.ExperimentalStdlibApi",
+      "-opt-in=kotlin.time.ExperimentalTime"
+    )
+  }
 }
 tasks.withType<JavaCompile> {
   sourceCompatibility = "21"
